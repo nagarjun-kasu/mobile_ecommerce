@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "node server/index.js",
-    "predeploy": "git add -A && git commit -m \"Prepare for deploy\" || true",
     "deploy": "gh-pages -d client"
   },
   "dependencies": {
