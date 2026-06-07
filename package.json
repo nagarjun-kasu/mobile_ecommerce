@@ -5,11 +5,16 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
-    "dev": "node server/index.js"
+    "dev": "node server/index.js",
+    "predeploy": "git add -A && git commit -m \"Prepare for deploy\" || true",
+    "deploy": "gh-pages -d client"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
