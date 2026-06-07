@@ -2,7 +2,7 @@
    api.js — Lightweight API Client for MobileHub
    ═══════════════════════════════════════════════════════════════ */
 
-const API_BASE = "https://mobile-ecommerce-0upb.onrender.com/api";
+const API_BASE = "https://mobile-ecommerce-0upb.onrender.com";
 
 async function apiRequest(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
