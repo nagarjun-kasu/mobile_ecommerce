@@ -4,11 +4,11 @@
 
 // ── Brand → Image Mapping ─────────────────────────────────────
 const BRAND_IMAGES = {
-  Samsung: "/assets/images/samsung.png",
-  Apple: "/assets/images/iphone.png",
-  Realme: "/assets/images/realme.png",
-  OnePlus: "/assets/images/oneplus.png",
-  Google: "/assets/images/pixel.png",
+  Samsung: "assets/images/samsung.png",
+  Apple: "assets/images/iphone.png",
+  Realme: "assets/images/realme.png",
+  OnePlus: "assets/images/oneplus.png",
+  Google: "assets/images/pixel.png",
 };
 
 const BRAND_GRADIENTS = {
@@ -203,7 +203,7 @@ function renderHero() {
   return `
     <section class="hero">
       <div class="hero-bg">
-        <img src="/assets/images/hero-banner.png" alt="Hero Background" />
+        <img src="assets/images/hero-banner.png" alt="Hero Background" />
       </div>
       <div class="hero-container">
         <div class="hero-content">
@@ -242,7 +242,7 @@ function renderHero() {
           </div>
         </div>
         <div class="hero-image">
-          <img src="/assets/images/iphone.png" alt="Featured Phone" />
+          <img src="assets/images/iphone.png" alt="Featured Phone" />
         </div>
       </div>
     </section>
@@ -315,7 +315,7 @@ function renderProductGrid() {
 }
 
 function renderProductCard(product, index) {
-  const image = BRAND_IMAGES[product.brand] || "/assets/images/samsung.png";
+  const image = BRAND_IMAGES[product.brand] || "assets/images/samsung.png";
   const gradient = BRAND_GRADIENTS[product.brand] || BRAND_GRADIENTS.Samsung;
   const badgeClass = product.badge
     ? `badge-${product.badge.toLowerCase().replace(/\s+/g, "-")}`
@@ -413,7 +413,7 @@ function renderCartSidebar() {
       (item) => `
       <div class="cart-item" data-id="${item.id}">
         <div class="cart-item-image" style="background: ${BRAND_GRADIENTS[item.brand] || BRAND_GRADIENTS.Samsung};">
-          <img src="${BRAND_IMAGES[item.brand] || "/assets/images/samsung.png"}" alt="${item.name}" />
+          <img src="${BRAND_IMAGES[item.brand] || "assets/images/samsung.png"}" alt="${item.name}" />
         </div>
         <div class="cart-item-info">
           <div class="cart-item-brand">${item.brand}</div>
@@ -501,7 +501,7 @@ function openProductModal(productId) {
   const product = state.products.find((p) => p.id === productId);
   if (!product) return;
 
-  const image = BRAND_IMAGES[product.brand] || "/assets/images/samsung.png";
+  const image = BRAND_IMAGES[product.brand] || "assets/images/samsung.png";
   const gradient = BRAND_GRADIENTS[product.brand] || BRAND_GRADIENTS.Samsung;
   const savings = product.originalPrice > product.price
     ? (product.originalPrice - product.price).toFixed(2)
